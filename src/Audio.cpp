@@ -4345,6 +4345,7 @@ bool Audio::setFilePos(uint32_t pos) {
 #else
     if(!audiofile) return false;
     if(pos < m_audioDataStart) pos = m_audioDataStart; // issue #96
+    if(pos > m_file_size) pos = m_file_size;
     m_resumeFilePos = pos;
     return true;
 #endif // AUDIO_NO_SD_FS
