@@ -158,7 +158,7 @@ protected:
 };
 //----------------------------------------------------------------------------------------------------------------------
 
-class Audio : private AudioBuffer{
+class Audio : public AudioBuffer{
 
     AudioBuffer InBuff; // instance of input buffer
 
